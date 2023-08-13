@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ParenthesisParser.Console": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

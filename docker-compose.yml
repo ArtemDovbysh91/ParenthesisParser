@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  parenthesisparser.console:
+    image: ${DOCKER_REGISTRY-}parser-image
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    build:
+      context: .
+      dockerfile: src/ParenthesisParser.Console/Dockerfile
+    environment: 
+        - DOTNET_USE_POLLING_FILE_WATCHER=1
+    volumes:
+      - ./src/ParenthesisParser.Console/Data:/app/Data
